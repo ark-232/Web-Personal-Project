@@ -148,7 +148,7 @@
   }
   
 
-  img{
+  .home-img{
       border-radius: 10px;
       box-shadow: 5px 10px var(--mainColor);
   }
@@ -158,6 +158,10 @@
   }
   
 .soundcloud{
+  padding: 50px;
+}
+
+.cardsDiv {
   padding: 50px;
 }
 
