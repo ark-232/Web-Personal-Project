@@ -165,4 +165,75 @@
   padding: 50px;
 }
 
+.card{
+  margin-top: 20px !important;
+}
+
+.projects{
+  padding: 30px;
+}
+
+.projects .img-fluid{
+  object-fit: cover;
+  height: 300px !important;
+  border-radius: 25px;
+}
+
+.about{
+  padding: 30px;
+}
+
+.about li{
+  list-style-type: none;
+}
+
+
+.contact{
+  padding: 20px;
+  padding-bottom: 30px;
+}
+
+.rubric table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.rubric table .selected {
+  color: #fff;
+  background: gray;
+}
+
+.rubric table caption {
+  font-size: 1.5em;
+  margin: 0.5em 0 0.75em;
+}
+
+.rubric table tr {
+  padding: 0.35em;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.rubric table th,
+.rubric table td {
+  padding: 0.625em;
+  text-align: center;
+}
+
+.rubric table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.rubric{
+  padding: 50px;
+}
+
+
   
