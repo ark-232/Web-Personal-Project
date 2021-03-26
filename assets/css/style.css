@@ -240,5 +240,16 @@
   color: var(--white) !important;
 }
 
+.references{
+  padding: 50px;
+  overflow: hidden;
+  padding-bottom: 150px;
+}
+
+.references li{
+  list-style-type: none;
+}
+
+
 
   

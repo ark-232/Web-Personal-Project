@@ -1,5 +1,6 @@
-
-var TxtType = function(el, toRotate, period) {
+// This code was taken from a tutorial, please look at references page.
+//If needed, this will be changed for the final project.
+let TxtType = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
     this.loopNum = 0;
