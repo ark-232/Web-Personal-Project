@@ -50,6 +50,7 @@
     text-align: left;
     font: normal 16px sans-serif;
     padding: 2% 10%;
+
   }
   
   .footer-distributed .footer-left p {
@@ -233,6 +234,10 @@
 
 .rubric{
   padding: 50px;
+}
+.btn{
+  background-color: var(--contrast) !important;
+  color: var(--white) !important;
 }
 
 
