@@ -1,3 +1,6 @@
+<?php 
+    require './assets/includes/configuration.inc.php'; 
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,78 +29,17 @@
   </head>
   <body>
     <!-- navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="index.html"
-        >Seb Beats <span id="cursor">| </span></a
-      >
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./assets/html/work.html">My Work</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./assets/html/story.html">My Story</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./assets/html/findMe.html">Find Me</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./assets/html/tech.html">Technologies</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./assets/html/projects.html">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./assets/html/gigs.html">Gigs</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Grading
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="./assets/html/references.html"
-                >References</a
-              >
-              <a class="dropdown-item" href="./assets/html/rubric.html"
-                >Rubrics</a
-              >
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <?php
+      require "./assets/includes/navbar.php"
+    ?>
+    
 
     <!-- content -->
     <div class="content pb-5">
       <div class="typewriter pt-5">
         <h1>
           <a
-            href="index.html"
+            href="./index.php"
             class="typewrite"
             data-period="2000"
             data-type='[ "Seb Beats: The Official Site", "I am a Musician.", "I am a Producer.", "I am an Entrepreneur." ]'
@@ -149,33 +91,9 @@
     </div>
 
     <!-- footer -->
-    <footer class="footer-distributed">
-      <div class="footer-right">
-        <a href="#"><i class="fa fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-soundcloud"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-      </div>
-
-      <div class="footer-left">
-        <p class="footer-links">
-          <a class="link-1" href="./index.html">Home</a>
-
-          <a href="./assets/html/work.html">My Work</a>
-
-          <a href="./assets/html/story.html">My Story</a>
-
-          <a href="./assets/html/findMe.html">Find Me</a>
-
-          <a href="./assets/html/tech.html">Technologies</a>
-
-          <a href="./assets/html/projects.html">Projects</a>
-
-          <a href="./assets/html/gigs.html">Gigs</a>
-        </p>
-
-        <p>ArkWerx LLC &copy; 2021</p>
-      </div>
-    </footer>
+    <?php
+      require './assets/includes/footer.php'
+    ?>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
