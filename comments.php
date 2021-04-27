@@ -1,3 +1,43 @@
+<?php
+require "./assets/includes/configuration.inc.php";
+require "./assets/includes/db-configuration.inc.php";
+?>
+
+<?php
+
+if (isset($_POST["name"])) {
+  echo "<br>";
+  $name = strip_tags($_POST["name"]);
+  $email = strip_tags($_POST["email"]);
+  $subject = strip_tags($_POST["subject"]);
+  $message = strip_tags($_POST["message"]);
+
+
+  $name = filter_var($name, FILTER_SANITIZE_STRING);
+  $email = filter_var($email, FILTER_SANITIZE_NUMBER_INT);
+  $subject = filter_var($subject, FILTER_SANITIZE_NUMBER_INT);
+  $message = filter_var($message, FILTER_SANITIZE_NUMBER_INT);
+
+  $mysqli = retrieveDatabaseConnection();
+
+  $sql = "INSERT INTO sebbeats (name, email, subject, message) VALUES (?,?,?,?)";
+  $stmt = $mysqli->prepare($sql);
+  $stmt->bind_param("ssss", $name, $email, $subject, $message);
+
+  $success = $stmt->execute();
+
+  if (!$success) {
+    echo "Execute failed: {$stmt->errno}";
+  } else {
+    echo "Execute is a success!";
+  }
+
+  $mysqli->close();
+}
+
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -33,7 +73,7 @@
 
         <!--Grid column-->
         <div class="col-md-9 mb-md-0 mb-5">
-          <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+          <form id="contact-form" name="contact-form" action="" method="POST">
 
             <!--Grid row-->
             <div class="row">
@@ -82,7 +122,7 @@
                 </div>
 
                 <div class="text-center text-md-left">
-                <input type="submit" class="btn btn-primary"></input>
+                  <input type="submit" class="btn btn-primary"></input>
                 </div>
 
               </div>
@@ -115,6 +155,30 @@
 
     </section>
   </div>
+  <?php
+  $mysqli = retrieveDatabaseConnection();
+
+  $sql = "SELECT * FROM hw4";
+  $result = $mysqli->query($sql);
+
+  $numberOfRows = $result->num_rows;
+
+  if ($numberOfRows > 0) {
+
+    while ($row = $result->fetch_assoc()) {
+      echo "
+        <div class='card bg-light w-50 mx-auto my-4 p-4'>
+          <p>Name: {$row['name']}</p>
+          <p>Email: {$row['email']}</p>
+          <p>Subject: {$row['subject']}</p>
+          <p>CVV/CVC: {$row['message']}</p>
+        </div>
+        ";
+    }
+  }
+
+  $mysqli->close();
+  ?>
 
 
 
