@@ -26,11 +26,6 @@ if (isset($_POST["name"])) {
 
   $success = $stmt->execute();
 
-  if (!$success) {
-    echo "Execute failed: {$stmt->errno}";
-  } else {
-    echo "Execute is a success!";
-  }
 
   $mysqli->close();
 }
@@ -158,7 +153,7 @@ if (isset($_POST["name"])) {
   <?php
   $mysqli = retrieveDatabaseConnection();
 
-  $sql = "SELECT * FROM hw4";
+  $sql = "SELECT * FROM sebbeats";
   $result = $mysqli->query($sql);
 
   $numberOfRows = $result->num_rows;
@@ -171,7 +166,7 @@ if (isset($_POST["name"])) {
           <p>Name: {$row['name']}</p>
           <p>Email: {$row['email']}</p>
           <p>Subject: {$row['subject']}</p>
-          <p>CVV/CVC: {$row['message']}</p>
+          <p>Message: {$row['message']}</p>
         </div>
         ";
     }

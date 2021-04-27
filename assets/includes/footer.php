@@ -7,19 +7,19 @@
 
       <div class="footer-left">
         <p class="footer-links">
-          <a class="link-1" href="../../index.php">Home</a>
+          <a class="link-1" href="./index.php">Home</a>
 
-          <a href="../../work.php">My Work</a>
+          <a href="./work.php">My Work</a>
 
-          <a href="../../story.php">My Story</a>
+          <a href="./story.php">My Story</a>
 
-          <a href="../../comments.php">Find Me</a>
+          <a href="./comments.php">Find Me</a>
 
-          <a href="../../tech.php">Technologies</a>
+          <a href="./tech.php">Technologies</a>
 
-          <a href="../../projects.php">Projects</a>
+          <a href="./projects.php">Projects</a>
 
-          <a href="../../gigs.php">Gigs</a>
+          <a href="./gigs.php">Gigs</a>
         </p>
 
         <p>ArkWerx LLC &copy; 2021</p>
