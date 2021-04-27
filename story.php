@@ -1,3 +1,6 @@
+<?php 
+    require './assets/includes/configuration.inc.php'; 
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,8 +9,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="../css/style.css" />
-    <script src="../js/script.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/js/script.js"></script>
     <script
       src="https://kit.fontawesome.com/c116131a28.js"
       crossorigin="anonymous"
@@ -18,72 +21,9 @@
   </head>
   <body>
       
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="../../index.html"
-          >Seb Beats <span id="cursor">| </span></a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-  
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="../../index.html">Home</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="./work.html">My Work</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="./story.html"
-                  >My Story <span class="sr-only">(current)</span></a
-                >
-              </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./findMe.html">Find Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./tech.html">Technologies</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./projects.html">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./gigs.html">Gigs</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Grading
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="./references.html"
-                  >References</a
-                >
-                <a class="dropdown-item" href="./rubric.html"
-                  >Rubrics</a
-                >
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
+  <?php
+      require "./assets/includes/navbar.php"
+    ?>
 
       <section id="about" class="about">
         <div class="container">
@@ -96,7 +36,7 @@
   
           <div class="row">
             <div class="col-lg-4 aos-init aos-animate" data-aos="fade-right">
-              <img src="../img/seva.jpeg" class="img-fluid" alt="">
+              <img src="./assets/img/seva.jpeg" class="img-fluid" alt="">
             </div>
             <div class="col-lg-8 pt-4 pt-lg-0 content aos-init aos-animate" data-aos="fade-left">
               <h3>Music Producer &amp; Entrepreneur</h3>
@@ -154,33 +94,9 @@
       </section>
 
 
-      <footer class="footer-distributed">
-        <div class="footer-right">
-          <a href="#"><i class="fa fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-soundcloud"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-        </div>
-  
-        <div class="footer-left">
-          <p class="footer-links">
-            <a class="link-1" href="../../index.html">Home</a>
-  
-            <a href="./work.html">My Work</a>
-  
-            <a href="./story.html">My Story</a>
-  
-            <a href="./findMe.html">Find Me</a>
-  
-            <a href="./tech.html">Technologies</a>
-  
-            <a href="./projects.html">Projects</a>
-  
-            <a href="./gigs.html">Gigs</a>
-          </p>
-  
-          <p>ArkWerx LLC &copy; 2021</p>
-        </div>
-      </footer>
+      <?php
+      require './assets/includes/footer.php'
+    ?>
 
 
 

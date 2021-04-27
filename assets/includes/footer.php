@@ -13,7 +13,7 @@
 
           <a href="../../story.php">My Story</a>
 
-          <a href="../../findMe.php">Find Me</a>
+          <a href="../../comments.php">Find Me</a>
 
           <a href="../../tech.php">Technologies</a>
 
