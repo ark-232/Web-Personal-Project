@@ -14,9 +14,9 @@ if (isset($_POST["name"])) {
 
 
   $name = filter_var($name, FILTER_SANITIZE_STRING);
-  $email = filter_var($email, FILTER_SANITIZE_NUMBER_INT);
-  $subject = filter_var($subject, FILTER_SANITIZE_NUMBER_INT);
-  $message = filter_var($message, FILTER_SANITIZE_NUMBER_INT);
+  $email = filter_var($email, FILTER_SANITIZE_STRING);
+  $subject = filter_var($subject, FILTER_SANITIZE_STRING);
+  $message = filter_var($message, FILTER_SANITIZE_STRING);
 
   $mysqli = retrieveDatabaseConnection();
 
@@ -76,8 +76,9 @@ if (isset($_POST["name"])) {
               <!--Grid column-->
               <div class="col-md-6">
                 <div class="md-form mb-0">
-                  <input required type="text" id="name" name="name" class="form-control">
                   <label for="name" class="">Your name</label>
+                  <input required type="text" id="name" name="name" class="form-control">
+
                 </div>
               </div>
               <!--Grid column-->
@@ -85,8 +86,9 @@ if (isset($_POST["name"])) {
               <!--Grid column-->
               <div class="col-md-6">
                 <div class="md-form mb-0">
-                  <input required type="email " id="email" name="email" class="form-control">
                   <label for="email" class="">Your email</label>
+                  <input required type="email " id="email" name="email" class="form-control">
+
                 </div>
               </div>
               <!--Grid column-->
@@ -98,8 +100,9 @@ if (isset($_POST["name"])) {
             <div class="row">
               <div class="col-md-12">
                 <div class="md-form mb-0">
-                  <input required type="text" id="subject" name="subject" class="form-control">
                   <label for="subject" class="">Subject</label>
+                  <input required type="text" id="subject" name="subject" class="form-control">
+
                 </div>
               </div>
             </div>
@@ -112,8 +115,9 @@ if (isset($_POST["name"])) {
               <div class="col-md-12">
 
                 <div class="md-form">
-                  <textarea required type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
                   <label for="message">Your message</label>
+                  <textarea required type="text" id="message" name="message" class="form-control md-textarea"></textarea>
+
                 </div>
 
                 <div class="text-center text-md-left">
