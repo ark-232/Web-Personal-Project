@@ -4,7 +4,7 @@ require "./assets/includes/configuration.inc.php";
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Rubrics</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -68,6 +68,17 @@ require "./assets/includes/configuration.inc.php";
                 </tr>
             </tbody>
         </table>
+        <div class="m-5">
+
+          <ul">
+            <li class="text-center">My original JS element is the self typing text on home page</li>
+            <li class="text-center">My DHTML element is the self typing text on home</li>
+            <li class="text-center">I corrected the content layout for the pages that where similar and removed one extra page</li>
+            <li class="text-center">EXTRA: recaptcha</li>
+            <li class="text-center">EXTRA: cool js animation</li>
+            <li class="text-center">EXTRA: blinking js cursor in site logo</li>
+          </ul>
+        </div>
       </div>
 
 

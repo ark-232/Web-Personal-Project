@@ -69,3 +69,56 @@ setInterval(() => {
      cursor = true;
    }
 }, speed);
+
+function validateContact() {
+  const errorContainer = document.querySelector("#errorContainer");
+  errorContainer.innerHTML = "";
+
+  const form = document.forms["contact-form"];
+
+  const name = form["name"];
+  const email = form["email"];
+  const subject = form["subject"];
+  const message = form["message"];
+  
+
+  //const usernameValue = usernameInput.value;
+  //const messageValue = messageInput.value;
+  const nameValue = name.value;
+  const emailValue = email.value;
+  const subjectValue = subject.value;
+  const messageValue = message.value;
+  
+
+
+
+  if (nameValue.trim().length == 0) {
+      errorContainer.innerHTML += getError("Name Cannot be Empty");
+      return false;
+  }
+  if (emailValue.trim().length == 0) {
+      errorContainer.innerHTML += getError("Email Cannot be Empty");
+      return false;
+  }
+  if (subjectValue.trim().length == 0) {
+    errorContainer.innerHTML += getError("Subject Cannot be Empty");
+    return false;
+}
+if (messageValue.trim().length == 0) {
+  errorContainer.innerHTML += getError("Message Cannot be Empty");
+  return false;
+}
+  
+ 
+ 
+
+
+
+  return true;
+}
+
+function getError(errorMessage) {
+  return `
+  <div class="my-3 mx-3 p-2 bg-danger text-white card">${errorMessage}</div>
+  `;
+}

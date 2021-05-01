@@ -5,7 +5,6 @@
         "./gigs.php" => "Gigs",
         "./projects.php" => "Projects",
         "./story.php" => "My Story",
-        "./tech.php" => "My Technologies",
         "./work.php" => "My Work",
 
     );
